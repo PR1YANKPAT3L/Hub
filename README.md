@@ -1,3 +1,3 @@
 # Hub
 #
-@author Priyank Patel
+by Priyank Patel

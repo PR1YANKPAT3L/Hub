@@ -1,0 +1,69 @@
+body {
+    color: #fff;
+    margin: 0px 0px 0px 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    min-height: 60px;
+}
+
+.each {
+    width: 193px;
+    height: 50px;
+    padding: 9px 12px 0 67px;
+    position: relative;
+    overflow: hidden;
+    -webkit-animation-duration: 0.35s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-name: flip;
+}
+
+@-webkit-keyframes flip {
+	from   { -webkit-transform: rotateX(-180deg) scale(0.2); }
+	to { -webkit-transform: rotateX(-360deg) scale(1); }
+}
+
+#base {
+    width: 272px;
+    height: 59px;
+    background: url(images/base.png) no-repeat;
+    position: absolute;
+    top: 0; left: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#icon {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 12px; left: 12px;
+    z-index: 1;
+}
+
+#icon img {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+#title {
+    font-size: 13px;
+    height: 15px;
+    font-weight: medium;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+    margin: 2px 0 4px 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+#text {
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+    height: 15px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}

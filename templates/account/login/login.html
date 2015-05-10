@@ -1,0 +1,40 @@
+<section class="login_wrapper">
+    <div class="login_box animated fadeIn">
+        <div class="login_box_primary">
+            <h3>Member Login</h3>
+            <hr>
+            <form>
+                <div class="group">
+                    <input type="text" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Username/Email</label>
+                </div>
+                <div class="group">
+                    <input type="password" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Password</label>
+                </div>
+                <div class="group">
+                    <button>Login</button>
+                </div>
+                <div class="group">
+                    <a href="#"><i class="fa fa-question-circle"></i><span>Forgot Username/Password</span></a>
+                </div>
+            </form>
+            <hr>
+            <div class="alternate_method inactive" ng-click="toggleAlternativeLogin()">Sign In with Alternate Methods</div>
+        </div>
+        <div class="login_box_alternative inactive">
+        	<h3>Alternate Login Methods</h3>
+        	<hr>
+        	<div class="alternate facebook noselect"><i class="fa fa-facebook"></i><span>Sign in with Facebook</span></div>
+        	<div class="alternate twitter noselect"><i class="fa fa-twitter"></i><span>Sign in with Twitter</span></div>
+        	<div class="alternate google noselect"><i class="fa fa-google"></i><span>Sign in with Google+</span></div>
+        	<div class="alternate yahoo noselect"><i class="fa fa-yahoo"></i><span>Sign in with Yahoo</span></div>
+        	<hr>
+            <div class="alternate_method inactive" ng-click="toggleMemberLogin()"><< Go Back</div>
+        </div>
+    </div>
+</section>

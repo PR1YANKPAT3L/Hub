@@ -1,0 +1,777 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import"normalize";
+/* Screen Stylesheet */
+
+/* Preprocessor Variables */
+
+$landing-background: '../../assets/images/landing.jpg';
+$login-background: '../../assets/images/misc.jpg';
+$pattern1: '../../assets/images/pattern_1.png';
+$transparent: 'transparent';
+$white: #FFFFFF;
+$purple: #7469CF;
+$darkPurple: #7264E3;
+$lightPurple: #8F83F2;
+$lightWhite: #F6F6F6;
+$black: #000000;
+$lightBlue: #26B8E9;
+$subheadColor: #2A2F42;
+$facebookColor: #3b5998;
+$facebookColorHover: #324F8C;
+$twitterColor: #55ACEE;
+$twitterColorHover: #479DDE;
+$googleColor: #dd4b39;
+$googleColorHover: #CF4534;
+$yahooColor: #7B0099;
+$yahooColorHover: #73008F;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+	background: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+#main_wrapper {
+    width: 100%;
+    height: 100%;
+
+}
+
+/* Landing Page CSS */
+
+#main_wrapper > .landing_main,
+#main_wrapper > .landing_info {
+    width: 100%;
+    height: 100%;
+    min-height: 900px;
+}
+
+#main_wrapper > .landing_main {
+	background: url($landing-background) no-repeat center top;
+    background-size: cover;
+}
+
+.landing_main > header {
+    width: 100%;
+    height: 100px;
+    background: $transparent;
+    position: relative;
+}
+
+.landing_main > header > .login {
+    position: absolute;
+    bottom: 0px;
+    right: 20%;
+  	-webkit-animation-delay: 0.2s;
+  	animation-delay: 0.2s;
+  	-moz-animation-delay: 0.2s;
+}
+
+.landing_main > header > .register {
+    position: absolute;
+    bottom: 0px;
+    right: 28%;
+    -webkit-animation-delay: 0.5s;
+  	animation-delay: 0.5s;
+  	-moz-animation-delay: 0.5s;
+}
+
+.landing_main > header > .login,
+.landing_main > header > .register {
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+}
+
+.landing_main > header > .login:active,
+.landing_main > header > .register:active {
+	transform: scale(0.9);
+}
+
+.landing_main > footer {
+    position: absolute;
+    bottom: 20px;
+    background: transparent;
+    width: 100%;
+    text-align: center;
+}
+
+.landing_main > .search {
+	width: 100%;
+	height: auto;
+	background: transparent;
+	margin: 10% auto;
+}
+
+.landing_main > .search > h1 {
+	color: $lightWhite;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 2em;
+	-webkit-animation-delay: 0.8s;
+  	animation-delay: 0.8s;
+  	-moz-animation-delay: 0.8s;
+}
+
+.landing_main > .search > .search_box {
+	cursor: pointer;
+	padding: 0.7em 6em;
+	background: $white;
+	color: $purple;
+	border-radius: 0.3em;
+	display: inline-block;
+	text-transform: none;
+	font-weight: 400;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1em;
+
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+
+	-webkit-animation-delay: 1.2s;
+  	animation-delay: 1.2s;
+  	-moz-animation-delay: 1.2s;
+}
+
+.landing_main > .search > .search_box:hover {
+	background: $purple;
+	color: $white;
+}
+
+.landing_main > .search > .search.button {
+	cursor: pointer;
+	width: 250px;
+	padding: 0.8em 2.5em;
+	background: $transparent;
+	color: $white;
+	border-radius: 0.3em;
+	text-transform: uppercase;
+	font-weight: 500;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1em;
+	margin: 2em auto;
+	border: 2px solid $white;
+	clear: both;
+
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+
+	-webkit-animation-delay: 1.6s;
+  	animation-delay: 1.6s;
+  	-moz-animation-delay: 1.6s;
+}
+
+.landing_main > .search > .search.button:hover {
+	background: $white;
+	color: $purple;
+	border-color: transparent;
+}
+
+.landing_main > .quick_info {
+	position: relative;
+	top: 1%;
+}
+
+.landing_main > .quick_info > h4 {
+	color: $lightWhite;
+	font-weight: 300;
+	font-size: 1.4em;
+	-webkit-animation-delay: 1.9s;
+  	animation-delay: 1.9s;
+  	-moz-animation-delay: 1.9s;
+}
+
+.landing_main > .quick_info > .info.button {
+	cursor: pointer;
+	background: $lightBlue;
+	padding: 0.7em 2em;
+	display: inline-block;
+	border-radius: 0.3em;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	color: $white;
+	margin: 1em auto;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+
+	-webkit-animation-delay: 2.3s;
+  	animation-delay: 2.3s;
+  	-moz-animation-delay: 2.3s;
+}
+
+.landing_main > .quick_info > .info.button:hover {
+	background: $white;
+	color: $lightBlue;
+}
+
+.landing_main > .quick_info > .info.button > i {
+	padding-left: 0.5em;
+	font-size: 1.2em;
+}
+
+footer span {
+	color: $white;
+	line-height: 3em;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+.landing_main > footer .mouse {
+    width: 28px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 14px;
+    margin: 0 auto;
+}
+
+.mouse > .scroller {
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background: white;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    -webkit-animation: scrolls 1.3s ease-out infinite;
+    -moz-animation: scrolls 1.3s ease-out infinite;
+    /* Chrome, Safari, Opera */
+}
+
+@-webkit-keyframes scrolls {
+    0% {
+        top: 10px;
+        opacity: 1;
+        height: 4px;
+   }
+   95% {
+       top: 15px;
+       opacity: 0;
+       height: 8px;
+  }
+  100% {
+      top: 18px;
+      opacity: 1;
+      height: 4px;
+ }
+}
+
+@-moz-keyframes scrolls {
+    0% {
+        top: 10px;
+        opacity: 1;
+        height: 4px;
+   }
+   95% {
+       top: 15px;
+       opacity: 0;
+       height: 8px;
+  }
+  100% {
+      top: 18px;
+      opacity: 1;
+      height: 4px;
+ }
+}
+
+.landing_info {
+	background-color: $lightWhite;
+	padding: 2em 0 0 0;
+	position: relative;
+	background-image: url($pattern1);
+}
+
+.landing_info > h2 {
+	font-weight: 500;
+	margin: 0 auto;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: $subheadColor;
+	line-height: 5em;
+}
+
+.landing_info > p {
+	width: 40%;
+	margin: 0 auto;
+	text-align: center;
+	color: $subheadColor;
+	line-height: 1.3em;
+}
+
+.landing_info > .row > .infobox {
+	padding: 50px;
+}
+
+.landing_info > .row > .infobox > .infobox-icon {
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	width: 60px;
+	height: 70px;
+	margin: 0 20px 20px 0;
+	float: left;
+	text-align: center;
+	font-size: 32px;
+	line-height: 70px;
+	color: $lightWhite;
+}
+
+.landing_info > .row > .infobox:nth-child(2) > .infobox-icon {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.landing_info > .row > .infobox:nth-child(2) > h4,
+.landing_info > .row > .infobox:nth-child(2) > p
+ {
+	color: $lightWhite;
+}
+
+.landing_info > .row > .infobox > h4 {
+	margin-top: 20px;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 28px;
+	text-transform: uppercase;
+	color: #465366;
+	letter-spacing: 3px;
+}
+
+.landing_info > .row > .infobox > p {
+	display: block;
+	float: none;
+	clear: both;
+	color: #465366;
+	font-size: 15px;
+	font-weight: 400;
+	text-align: left;
+	line-height: 1.6em;
+}
+
+.landing_info > .row {
+	margin: 5em auto;
+	min-height: 300px;
+}
+
+.landing_info > .row > .columns {
+	-webkit-box-shadow: 0px 10px 60px -25px rgba(0, 0, 0, 1);
+    -moz-box-shadow:    0px 10px 60px -25px rgba(0, 0, 0, 1);
+    box-shadow:         0px 10px 60px -25px rgba(0, 0, 0, 1);
+}
+
+.landing_info > .row > .columns:first-child {
+	background-color: #5FD080;
+	height: 300px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.landing_info > .row > .columns:nth-child(2) {
+	background-color: #2A2F42;
+	height: 300px;
+}
+
+.landing_info > .row > .columns:last-child {
+	background-color: #53BBB4;
+	height: 300px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.landing_info > footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	min-height: 300px;
+	background: #22252b url('http://demo.kingkongthemes.com/ruby2/wp-content/uploads/2015/02/bg-city.png') no-repeat center bottom;
+}
+
+.landing_info > footer > .bottom {
+	height: 50px;
+	width: 100%;
+	border-top: 2px solid #333333;
+	background: transparent;
+	position: absolute;
+	bottom: 0;
+}
+
+.landing_info > footer > .bottom > .row > .copyright {
+	float: left;
+	line-height: 45px;
+	color: #555555;
+	font-size: 0.9em;
+}
+
+.landing_info > footer > .bottom > .row > .quicklinks > ul {
+	line-height: 45px;
+	list-style: none;
+	float: right;
+}
+
+.landing_info > footer > .bottom > .row > .quicklinks > ul > li,
+.landing_info > footer > .bottom > .row > .quicklinks > ul > li > a {
+	padding: 0 0.6em;
+	text-decoration: none;
+	color: #555555;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 0.9em;
+}
+
+/* Login Page CSS */
+.login_wrapper,
+.register_wrapper {
+	background: url($login-background);
+	width: 100%;
+	height: 100%;
+}
+
+.login_wrapper > .login_box,
+.register_wrapper > .register_box {
+	background-color: #e8e8e8;
+	position: absolute;
+	padding: 20px;
+	left: calc(50% - 200px);
+	top: calc(50% - 13em);
+	width: 400px;
+	height: 460px;
+	border-radius: 3px;
+	box-shadow: 0 1px 5px 0 rgba(0,0,0,0.26);
+	overflow: hidden;
+
+	animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+}
+
+.login_wrapper > .login_box > .login_box_primary > h3,
+.login_box_alternative h3,
+.register_wrapper > .register_box > h3 {
+	font-size: 1.3em;
+	font-weight: 400;
+	color: $purple;
+	text-transform: uppercase;
+	line-height: 2em;
+	text-shadow: 0 1px 0 $white;
+	letter-spacing: 2px;
+}
+
+.login_box_primary form .group,
+.register_box form .group {
+    position: relative;
+    margin: 2em 2em;
+    text-align: center;
+}
+
+.login_box_primary form .group:first-child,
+.register_box form .group:first-child {
+	margin-top: 3em;
+}
+
+.login_box_primary form .group input,
+.register_box form .group input {
+    font-size: 15px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid $purple;
+    color: #333333;
+}
+
+.login_box_primary form .group input:focus,
+.register_box form .group input:focus {
+    outline: none;
+}
+
+.login_box_primary form .group label,
+.register_box form .group label {
+    color: #999;
+    font-size: 15px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 15px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.login_box_primary form .group input:focus ~ label,
+.login_box_primary form .group input:valid ~ label,
+.register_box form .group input:focus ~ label,
+.register_box form .group input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: $purple;
+}
+
+.login_box_primary form .group .bar,
+.register_box form .group .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.login_box_primary form .group .bar:before,
+.login_box_primary form .group .bar:after,
+.register_box form .group .bar:before,
+.register_box form .group .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: $purple;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.login_box_primary form .group .bar:before,
+.register_box form .group .bar:before {
+    left: 50%;
+}
+
+.login_box_primary form .group .bar:after,
+.register_box form .group .bar:after {
+    right: 50%;
+}
+
+.login_box_primary form .group input:focus ~ .bar:before,
+.login_box_primary form .group input:focus ~ .bar:after,
+.register_box form .group input:focus ~ .bar:before,
+.register_box form .group input:focus ~ .bar:after {
+    width: 50%;
+}
+
+.login_box_primary form .group .highlight,
+.register_box form .group .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.login_box_primary form .group input:focus ~ .highlight,
+.register_box form .group input:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: $purple;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+@-moz-keyframes inputHighlighter {
+    from {
+        background: $purple;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+@keyframes inputHighlighter {
+    from {
+        background: $purple;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+.login_box_primary form .group button,
+.register_box form .group button {
+	width: 100%;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 2px;
+	outline: none;
+	background: $purple;
+	color: $lightWhite;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0 1px 5px 0 rgba(0,0,0,0.26);
+	text-shadow: 0 -1px 0 $darkPurple;
+
+	transition: all 0.8s;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+}
+
+.login_box_primary form .group button:hover,
+.register_box form .group button:hover {
+	background: $lightPurple;
+	box-shadow: none;
+}
+
+.login_box_primary form .group button:active,
+.register_box form .group button:active {
+	transform: scale(0.95);
+}
+
+.login_box_primary form .group a {
+	text-decoration: none;
+	color: #555555;
+	font-weight: 300;
+	font-size: 14px;
+	text-align: center;
+}
+
+.login_box_primary form .group a i {
+	padding: 0 10px;
+	font-size: 17px;
+	color: #555555;
+}
+
+.login_box_primary form .group a i,
+.login_box_primary form .group a span {
+	vertical-align: center;
+}
+
+.alternate_method {
+	cursor: pointer;
+	text-transform: uppercase;
+	color: $purple;
+	letter-spacing: 1px;
+	text-shadow: 0 1px 0 #FFFFFF;
+
+	transition: all 1s ease-out;
+	-webkit-transition: all 1s ease-out;
+	-moz-transition: all 1s ease-out;
+}
+
+.alternate_method:hover {
+	color: $darkPurple;
+}
+
+.login_box .alternate_method.inactive {
+	margin: 3em auto;
+	padding: 20px 0;
+	color: #666666;
+}
+
+.login_box_primary.inactive {
+	position: relative;
+	left: -110%;
+}
+
+.login_box_primary {
+	position: relative;
+	left: 0px;
+	transition: left 1s ease-out;
+	-webkit-transition: left 1s ease-out;
+	-moz-transition: left 1s ease-out;
+	z-index: 88;
+}
+
+.login_box_alternative.inactive {
+	position: relative;
+	top: -116%;
+	left: 110%;
+}
+
+.login_box_alternative {
+	position: relative;
+	top: -116%;
+	left: 0px;
+	padding: 10px 0 0 0;
+	z-index: 99;
+
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+}
+
+.login_box_alternative .alternate {
+	cursor: pointer;
+	margin: 2em auto;
+	padding: 10px 15px;
+	background: #999999;
+	width: 250px;
+	border-radius: 3px;
+	color: $white;
+	box-shadow: 0 1px 5px 0 rgba(0,0,0,0.26);
+	font-size: 14px;
+	letter-spacing: 1px;
+
+	transition: all 0.8s;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+}
+
+.login_box_alternative .alternate i {
+	padding: 0 15px 0 0;
+}
+
+.login_box_alternative .alternate.facebook {
+	background: $facebookColor;
+}
+
+.login_box_alternative .alternate.facebook:hover {
+	background: $facebookColorHover;
+}
+
+.login_box_alternative .alternate.twitter {
+	background: $twitterColor;
+}
+
+.login_box_alternative .alternate.twitter:hover {
+	background: $twitterColorHover;
+}
+
+.login_box_alternative .alternate.google {
+	background: $googleColor;
+}
+
+.login_box_alternative .alternate.google:hover {
+	background: $googleColorHover;
+}
+
+.login_box_alternative .alternate.yahoo {
+	background: $yahooColor;
+}
+
+.login_box_alternative .alternate.yahoo:hover {
+	background: $yahooColorHover;
+}
+
+/* Register Form CSS */
+.register_wrapper > .register_box {
+	left: calc(50% - 200px);
+	top: calc(50% - 17em);
+	width: 400px;
+	height: 560px;
+}
